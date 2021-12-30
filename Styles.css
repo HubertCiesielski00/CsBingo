@@ -1,0 +1,21 @@
+*{
+    box-sizing: border-box;
+    --plate-size--: 500px;
+    --border-standard--: 2px hsla(220, 50%, 50%, 50%) solid;
+    --border-hovered--: 2px hsla(220, 70%, 70%, 70%) solid;
+}
+container{
+    margin: auto;
+    width:  var(--plate-size--);
+    height: var(--plate-size--);
+    display: flex;
+    flex-wrap: wrap;
+}
+.plate, .logotype{
+    display: inline-block;
+    width: 20%;
+    border: var(--border-standard--);
+}
+.plate:hover{
+    border-color: red;
+}
