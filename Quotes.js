@@ -35,4 +35,3 @@ const quotes = [
     "Rucham ci matkę",
     "Pod drewnem!"
 ]
-const AlreadyDrawn = []
