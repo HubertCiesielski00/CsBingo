@@ -1,4 +1,4 @@
-const quotes= [
+const quotes = [
     "No zobacz ile mam MS'u",
     "Kurwa, gość jest odpalony",
     "Dlatego proponuję grać faceity",
@@ -9,7 +9,7 @@ const quotes= [
     "Info z dupy",
     "Cyka Blyat",
     "Kurwa, w to się nie da grać",
-    "kurwa, ruscy z aimbotem",
+    "Kurwa, ruscy z aimbotem",
     "Znowu rusek w teamie",
     "English, motherfucker",
     "KURWA, ROTUJ!",
@@ -31,5 +31,8 @@ const quotes= [
     "Mam mleko",
     "Brawo Panowie",
     "Pamiętacie smoke'a?",
-    ""
+    "Tylko info",
+    "Rucham ci matkę",
+    "Pod drewnem!"
 ]
+const AlreadyDrawn = []
