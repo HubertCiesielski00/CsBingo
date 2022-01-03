@@ -17,14 +17,34 @@ const randomize = (length)=> {
 
 const CheckToWin = (buttons, array, xIndex, yIndex) =>{
     
-    array[xIndex][yIndex] = true;
-    buttons[xIndex * 5 + yIndex].classList.add("plate__clicked");
+    buttons[xIndex * 5 + yIndex].classList.toggle("plate__clicked");
 
+    let Vertical = true;
+    let Horizonral = true;
 
+    if(array[xIndex][yIndex] == true){
+        array[xIndex][yIndex] = false;
+    }
+    else{
+        array[xIndex][yIndex] = true
+    }
 
+    for(let i = 0; i < 5; i++){
+        if(array[i][yIndex] != true){
+            Horizonral = false;
+        }
+        if(array[xIndex][i] != true){
+            Vertical = false;
+        }
+    }
+    if(Vertical || Horizonral){
+        alert("bingo!");
+    }
 }
 
 window.onload = ()=>{
+    
+    let replay = document.querySelector(".new_game");
     
     let ArrayOfPlatesValues = new Array(5);
     for(let i = 0; i < 5; i++){
@@ -51,5 +71,6 @@ window.onload = ()=>{
             Plates[i*5 + j].addEventListener("click", ()=>{CheckToWin(Plates, ArrayOfPlatesValues, i,j)})
         }
     }
+    
 }
 

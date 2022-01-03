@@ -1,9 +1,8 @@
 *{
     font-family: 'Goldman', cursive;
     box-sizing: border-box;
-    --plate-size--: 600px;
-    --border-standard--: 2px hsla(220, 50%, 50%, 50%) solid;
-    --border-hovered--: 2px hsla(220, 70%, 70%, 70%) solid;
+    --container-size--: 600px;
+    --border-standard--: 2px hsla(30, 50%, 30%, 100%) solid;
     margin: 0;
 }
 header{
@@ -17,8 +16,8 @@ header{
 }
 container{
     margin: auto;
-    width:  var(--plate-size--);
-    height: var(--plate-size--);
+    width:  var(--container-size--);
+    height: var(--container-size--);
     display: flex;
     flex-wrap: wrap;
     border: var(--border-standard--);
@@ -29,9 +28,25 @@ container{
     border: var(--border-standard--);
     background-color: white;
 }
-.plate:hover, .plate__clicked{
-    border-color: red;
+
+.plate__clicked, .plate:hover{
+    background-color: hsl(150, 80%, 50%);
 }
-.plate__clicked{
-    background-color: aqua;
+.plate, .plate:hover, .plate__clicked{
+    transition: 350ms ease-in-out;
+    
+}
+.new_game{
+    display: block;
+    padding: 10px;
+    color: white;
+    border: var(--border-standard--);
+    text-decoration: none;
+    background-color:hsl(10, 80%, 50%);
+}
+.new_game:hover{
+    background-color: hsl(110, 50%, 50%);
+}
+.new_game, .new_game:hover{
+ transition: 350ms ease-in-out;
 }
